@@ -1,17 +1,15 @@
 .menu {
-  @extend .container;
-  padding: 0;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+  grid-gap: 20px;
+  justify-content: end;
+  grid-area: container;
+
   list-style-type: none;
 
   &__item {
     position: relative;
     line-height: 60px;
-    margin-left: 20px;
-  }
-
-  &__item--first {
-    margin-left: 0;
   }
 
   &__link {

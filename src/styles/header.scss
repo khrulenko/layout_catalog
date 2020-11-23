@@ -1,10 +1,9 @@
-.container {
-  display: flex;
-  justify-content: space-between;
-}
-
 .header {
-  @extend .container;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-template-areas: "logo container";
+  justify-content: space-between;
+
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   padding-left: $header-side-padding;
@@ -13,6 +12,8 @@
   font-weight: 500;
 
   &__logo {
+    grid-area: logo;
+
     align-self: center;
     height: 40px;
   }
